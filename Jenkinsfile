@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building.. .'
-                sh 'cd webapp && sudo apt install npm && npm run build'
+                echo 'Building.. '
+                sh 'cd webapp && sudo -S apt install npm && npm run build'
             }
         }
         stage('Test') {
