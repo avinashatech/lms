@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building.. '
+                echo 'Building..'
+                sh '/path/to/tsc && vite build'
                 sh 'cd webapp && npm run build'
             }
         }
